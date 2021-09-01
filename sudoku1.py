@@ -29,3 +29,11 @@ def solve_sudoku(board, i, j):
     else:
         ni = i
         nj = j + 1 
+    if(board[i][j] != 0):
+        solve_sudoku(board, ni, nj)
+    else:
+        for pa in range(1,10):
+            if(valid(board, i, j, pa) == true):
+                board[i][j] = pa
+                solve_sudoku(board, ni, nj)
+                board[i][j] = 0
