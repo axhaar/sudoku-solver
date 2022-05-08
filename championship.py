@@ -10,6 +10,8 @@ board = [
     [0,0,4,0,6,0,0,9,0]
 ]
 
+#the above question is from World Sudoku Championship
+
 def print_board(board):
     for i in range(0,9):
         for j in range(0,9):
@@ -19,6 +21,7 @@ def print_board(board):
         print(" ")
         if((i+1)%3 == 0 and i != 8):
             print("---------------------------------")
+    print("\n")
 
 def solve_sudoku(board, i, j): 
     if(i == len(board)):
